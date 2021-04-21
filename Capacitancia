@@ -1,0 +1,25 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from math import exp
+from math import pi
+
+
+h = 20 
+r = 0.01 
+k = 401 
+rho = 8933 
+V = 0.075 
+Cp = 385 
+Ti = 353   
+Too = 296  
+H = 0.5 
+tfinal = 1200 
+
+tetai = Ti-Too 
+As = 2*pi*H*r 
+
+for t in range(0, 1200, 120):
+    
+    q = (rho*V*Cp*tetai)*(1-exp(-(h*As)/(rho*V*Cp)*t))
+    
+    print(q)
